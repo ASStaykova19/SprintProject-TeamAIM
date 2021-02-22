@@ -26,10 +26,10 @@ void menu() {
 	case 1: std::system("CLS"); Game(); break;
 	case 2: {
 		std::system("CLS");
-		cout << "Scrum Trainer - Александра Стайкова" << endl;
-		cout << "Quality Engineer - Мирослав Иванов" << endl;
-		cout << "Code Checker - Полина Петрова" << endl;
-		cout << "Scrum Trainer - Александър Клингенберг" << endl;
+		cout << "Scrum Trainer - Alexandra Staykova" << endl;
+		cout << "Quality Engineer - Miroslav Ivanov" << endl;
+		cout << "Code Checker - Polina Petrova" << endl;
+		cout << "Developer - Alexander Klingenberg" << endl;
 		cout << endl << endl << endl;
 
 		Welcome();
