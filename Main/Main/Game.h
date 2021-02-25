@@ -11,7 +11,7 @@ void Game() {
 
 	int Tries = 3; // Tries the user gets
 	bool Tempbool = false; //Temporary bool
-	int levelup = 1; 
+	int levelup = 1; //defines level
 	int wordcounter = 0; // counts how many times you have guessed a word
 	int SecretCounter = 0; // counts found secrets
 
@@ -35,29 +35,29 @@ void Game() {
 
 	// Level one!!
 	system("Color 3"); // Sets colour for the text
-	
-	cout << "You have to guess three words with these letters" << endl << endl;
+	//shows task
+	cout << "You have to guess three words with these letters" << endl << endl; 
 	cout << "The words have four letters:" << endl << endl;
 	cout << "******* ******* ******* ******* ******* *******" << endl;
 	cout << "*     * *     * *     * *     * *     * *     *" << endl;
 	for (int i = 0; i < 6; i++)
 	{
-		cout << "*  " << FirstLettersGiven[i] << "  * ";
+		cout << "*  " << FirstLettersGiven[i] << "  * "; //letters you can choose from
 	}
 	cout << endl << "*     * *     * *     * *     * *     * *     *" << endl;
 	cout << "******* ******* ******* ******* ******* *******" << endl;
 	cout << endl << endl;
-
+	//start level
 	while (Tries > 0)
 	{
-		Tempbool = false;
+		Tempbool = false; //resets guess
 		cin >> Guess;
 		for (int i = 0; i < 5;)
 		{
 			if (FirstWordList[i] == Guess)
 			{
-				FirstWordList[i] = "****";
-				Tempbool = true;
+				FirstWordList[i] = "****"; //delete word after guess
+				Tempbool = true; //if guess is true
 				break;
 			}
 			else
@@ -73,7 +73,7 @@ void Game() {
 			wordcounter++;
 			if (wordcounter == 3)
 			{
-				levelup++;
+				levelup++; //select next level
 				break;
 			}
 		}
@@ -92,6 +92,7 @@ void Game() {
 	//Level Two!!
 	if (levelup == 2)
 	{
+		//shows task
 		cout << "-------------------------------------" << endl;
 		cout << "Awesome you passed the first level!!!" << endl;
 		cout << "-------------------------------------" << endl << endl << endl << endl;
@@ -104,7 +105,7 @@ void Game() {
 
 		for (int i = 0; i < 12; i++)
 		{
-			cout << "*  " << SecondLettersGiven[i] << "  * ";
+			cout << "*  " << SecondLettersGiven[i] << "  * "; //letters you can choose from
 		}
 		cout <<endl << "*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     *" << endl;
 		cout << "******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* *******" << endl;
@@ -114,14 +115,14 @@ void Game() {
 
 		while (Tries > 0)
 		{
-			Tempbool = false;
+			Tempbool = false; //resets guess
 			cin >> secondGuess;
 			for (int i = 0; i < 11;)
 			{
 				if (secondWordList[i] == secondGuess)
 				{
-					secondWordList[i] = "*****";
-					Tempbool = true;
+					secondWordList[i] = "*****"; //delete word after guess
+					Tempbool = true; //if guess is true
 					break;
 				}
 				else
@@ -208,7 +209,7 @@ void Game() {
 				wordcounter++;
 				if (wordcounter == 3)
 				{
-					levelup++;
+					levelup++; //select next level
 					break;
 				}
 			}
@@ -229,6 +230,7 @@ void Game() {
 	//Level Three!!
 	if (levelup == 3)
 	{
+		//shows task
 		cout << "--------------------------------------" << endl;
 		cout << "Awesome you passed the Second level!!!" << endl;
 		cout << "--------------------------------------" << endl << endl << endl << endl;
@@ -240,7 +242,7 @@ void Game() {
 		cout << "*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     *" << endl;
 		for (int i = 0; i < 18; i++)
 		{
-			cout << "*  " << thirdLettersGiven[i] << "  * ";
+			cout << "*  " << thirdLettersGiven[i] << "  * "; //letters you can choose from
 		}
 		cout << endl << "*     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     * *     *" << endl;
 		cout  << "******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* ******* *******" << endl;
@@ -255,8 +257,8 @@ void Game() {
 			{
 				if (thirdWordList[i] == thirdGuess)
 				{
-					thirdWordList[i] = "******";
-					Tempbool = true;
+					thirdWordList[i] = "******"; //resets guess 
+					Tempbool = true; //if guess is true
 					break;
 				}
 				else
@@ -264,7 +266,7 @@ void Game() {
 					i++;
 				}
 			}
-			if (Tempbool == true)
+			if (Tempbool == true) 
 			{
 				cout << endl << endl << "----------------------" << endl;
 				cout << "Great You got a word" << endl;
@@ -341,7 +343,7 @@ void Game() {
 						cout << "      __\\///\\\\\\__________\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\__/\\\\_____\\\\\\_\\/\\\\\\__________/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\___\\/\\\\\\____\\/\\\\\\_____/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\_\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\_\\////////\\\\\\_  " << endl;
 						cout << "       ____\\////\\\\\\\\\\\\\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\_\\//\\\\\\\\\\\\\\\\__\\/\\\\\\_________\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\//\\\\\\\\\\\\\\\\\\___/\\\\\\\\\\\\\\\\\\_\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\/\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\__/\\\\\\\\\\\\\\\\\\\\_ " << endl;
 						cout << "        _______\\/////////_____\\/////_____\\///____\\///___\\////////___\\///___________\\////////\\//______\\/////_____\\/////////___\\/////////___\\////////\\//______\\/////____\\///_____\\/////_____\\///____\\///__\\//////////__" << endl;
-
+						//changes the color
 						for (int i = 0; i < 1;)
 						{
 							system("Color 3");
