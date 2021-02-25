@@ -1,9 +1,6 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
-#include <stdio.h>
-#include <windows.h>
-#include <MMsystem.h>
 #include "EndLogo.h"
 using namespace std;
 
@@ -14,7 +11,7 @@ void Game() {
 
 	int Tries = 3; // Tries the user gets
 	bool Tempbool = false; //Temporary bool
-	int levelup = 1;
+	int levelup = 1; 
 	int wordcounter = 0; // counts how many times you have guessed a word
 	int SecretCounter = 0; // counts found secrets
 
@@ -35,7 +32,6 @@ void Game() {
 	char thirdLettersGiven[18] = { 'v' , 'a' , 'b', 's' ,'t', 'c', 'i', 'n', 'n' , 'k', 's', 's', 'o' , 'e' , 't' , 'a' , 'a' , 'd' }; // The letters, given to ther user
 	
 	// All levels
-
 
 	// Level one!!
 	system("Color 3"); // Sets colour for the text
@@ -225,6 +221,7 @@ void Game() {
 
 	}
 
+
 	std::system("CLS");
 
 	system("Color 6"); // Sets colour for the text
@@ -331,7 +328,7 @@ void Game() {
 					}
 					else
 					{
-						system("CLS");
+						std::system("CLS");
 						cout << "---------------------------" << endl;
 						cout << "You found the secret ending" << endl;
 						cout << "---------------------------" << endl << endl << endl << endl;
@@ -344,6 +341,20 @@ void Game() {
 						cout << "      __\\///\\\\\\__________\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\__/\\\\_____\\\\\\_\\/\\\\\\__________/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\___\\/\\\\\\____\\/\\\\\\_____/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\_\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\_\\////////\\\\\\_  " << endl;
 						cout << "       ____\\////\\\\\\\\\\\\\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\_\\//\\\\\\\\\\\\\\\\__\\/\\\\\\_________\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\//\\\\\\\\\\\\\\\\\\___/\\\\\\\\\\\\\\\\\\_\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\/\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\__/\\\\\\\\\\\\\\\\\\\\_ " << endl;
 						cout << "        _______\\/////////_____\\/////_____\\///____\\///___\\////////___\\///___________\\////////\\//______\\/////_____\\/////////___\\/////////___\\////////\\//______\\/////____\\///_____\\/////_____\\///____\\///__\\//////////__" << endl;
+
+						for (int i = 0; i < 1;)
+						{
+							system("Color 3");
+							system("Color 2");
+							system("Color 1");
+							system("Color 4");
+							system("Color 5");
+							system("Color 6");
+							system("Color 9");
+							system("Color 8");
+							system("Color 7");
+						}
+						
 					}
 					
 				}
