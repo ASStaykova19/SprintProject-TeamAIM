@@ -4,7 +4,10 @@ using namespace std;
 
 // The logo displayed at the end
 void win() {
-	system("color 2");
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2); // Sets colour for the text
+	}
 	cout << "                            .((((((((((((((((((((((/                            " << endl;
 	cout << "                      .(((((((((((((((((((((((((((((((((((                      " << endl;
 	cout << "                  *(((((((((((((((((((((((((((((((((((((((((((                  " << endl;
@@ -36,5 +39,4 @@ void win() {
 	cout << "                   ((((((((((((((((((########################(                  " << endl;
 	cout << "                       *((((((((((((((((#################.                      " << endl;
 	cout << "                              /(((((((((((########/                             " << endl;
-	std::cin.get(); // press any key to continue
 }

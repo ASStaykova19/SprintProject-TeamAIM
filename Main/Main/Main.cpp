@@ -11,5 +11,5 @@ int main()
 {
 	logo();
 	Welcome();
-	menu();
+	Menu();
 }

@@ -1,7 +1,9 @@
 ﻿#pragma once
 #include <iostream>
 #include <string>
+#include <Windows.h>
 #include "EndLogo.h"
+#include "menu.h"
 using namespace std;
 
 // The main code and game itself
@@ -14,6 +16,7 @@ void Game() {
 	int levelup = 1; 
 	int wordcounter = 0; // counts how many times you have guessed a word
 	int SecretCounter = 0; // counts found secrets
+	
 
 	// First level
 	string Guess; // The try the user has
@@ -34,7 +37,10 @@ void Game() {
 	// All levels
 
 	// Level one!!
-	system("Color 3"); // Sets colour for the text
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3); // Sets colour for the text
+	} 
 	
 	cout << "You have to guess three words with these letters" << endl << endl;
 	cout << "The words have four letters:" << endl << endl;
@@ -87,8 +93,10 @@ void Game() {
 
 	std::system("CLS");
 
-	system("Color 5"); // Sets colour for the text
-	
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 5); // Sets colour for the text
+	}
 	//Level Two!!
 	if (levelup == 2)
 	{
@@ -224,7 +232,10 @@ void Game() {
 
 	std::system("CLS");
 
-	system("Color 6"); // Sets colour for the text
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6); // Sets colour for the text
+	}  
 
 	//Level Three!!
 	if (levelup == 3)
@@ -341,20 +352,6 @@ void Game() {
 						cout << "      __\\///\\\\\\__________\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\__/\\\\_____\\\\\\_\\/\\\\\\__________/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\___\\/\\\\\\____\\/\\\\\\_____/\\\\\\/////\\\\\\_____\\/\\\\\\_/\\\\__\\/\\\\\\_\\//\\\\\\__/\\\\\\__\\/\\\\\\___\\/\\\\\\_\\////////\\\\\\_  " << endl;
 						cout << "       ____\\////\\\\\\\\\\\\\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\_\\//\\\\\\\\\\\\\\\\__\\/\\\\\\_________\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\//\\\\\\\\\\\\\\\\\\___/\\\\\\\\\\\\\\\\\\_\\//\\\\\\\\\\\\\\\\/\\\\____\\//\\\\\\\\\\___\\/\\\\\\__\\///\\\\\\\\\\/___\\/\\\\\\___\\/\\\\\\__/\\\\\\\\\\\\\\\\\\\\_ " << endl;
 						cout << "        _______\\/////////_____\\/////_____\\///____\\///___\\////////___\\///___________\\////////\\//______\\/////_____\\/////////___\\/////////___\\////////\\//______\\/////____\\///_____\\/////_____\\///____\\///__\\//////////__" << endl;
-
-						for (int i = 0; i < 1;)
-						{
-							system("Color 3");
-							system("Color 2");
-							system("Color 1");
-							system("Color 4");
-							system("Color 5");
-							system("Color 6");
-							system("Color 9");
-							system("Color 8");
-							system("Color 7");
-						}
-						
 					}
 					
 				}
@@ -366,5 +363,26 @@ void Game() {
 			}
 		}
 
+	}
+	if (Tries < 1)
+	{
+		// Variables 
+		int LostGameOption; // When you lose the option to restart or exit
+		cout << "Sorry you Lost, but try again :D" << endl;
+		cout << "1. Restart the game" << endl;
+		cout << "2. Exit" << endl;
+		cin >> LostGameOption;
+		switch (LostGameOption)
+		{
+		case 1:	system("CLS"); Game();
+		case 2:std::system("CLS"); cout << "Goodbye have a nice day!! :D" << endl; break;
+		default: {
+			system("CLS");
+			cout << "---------------------------" << endl;
+			cout << "Sorry Wrong Input Try Again" << endl;
+			cout << "---------------------------" << endl;
+			break;
+		}
+		}
 	}
 }

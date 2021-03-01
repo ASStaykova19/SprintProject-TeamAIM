@@ -1,10 +1,14 @@
 #pragma once
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 // logo
 void logo() {
-	system("color 2");
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2); // Sets colour for the text
+	}
 	cout << "                                       %%%.                                     " << endl;
 	cout << "                                       ///.                                     " << endl;
 	cout << "                                  (%%%%///#%%%%,                                " << endl;

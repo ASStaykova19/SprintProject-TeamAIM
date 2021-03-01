@@ -5,10 +5,12 @@
 using namespace std;
 
 // The menu
-void menu() {
+void Menu() {
 
-	system("Color 2"); // Sets colour for the text
-
+	if (true)
+	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2); // Sets colour for the text
+	}
 	// Variables
 	int StartOptions;
 
@@ -33,7 +35,7 @@ void menu() {
 		cout << endl << endl << endl;
 
 		Welcome();
-		menu();
+		Menu();
 	}
 	case 3: std::system("CLS"); cout << "Goodbye have a nice day!! :D" << endl; break;
 	default: {
@@ -42,7 +44,7 @@ void menu() {
 		cout << "Sorry Wrong Input Try Again" << endl;
 		cout << "---------------------------" << endl;
 		Welcome();
-		menu();
+		Menu();
 	}
 	}
 }
