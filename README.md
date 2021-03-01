@@ -1,6 +1,6 @@
 # SprintProject-TeamAIM
 
-![logo (1).](https://i.imgur.com/miL8jOz.png) //CHANGE IT
+![logo (1).](https://imgur.com/aiTw9fJ) //CHANGE IT
 
 Team AIM - Alexandra Staykova, Alexander Klingenberg, Miroslav Ivanov, Polina Petrova
 
